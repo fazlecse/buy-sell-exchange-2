@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coinectra</title>
+    <!-- Favicon link -->
+    <link
+      rel="shortcut icon"
+      href="./assets/img/logo/favicon.webp"
+      type="image/x-icon"
+    />
+    <!-- Fontawesome6 Css link -->
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <!-- Bootstrap5 Css link -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <!-- Owl carousel Css link -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css" />
+    <!-- select2 Css link -->
+    <link rel="stylesheet" href="assets/css/select2.min.css" />
+
+    <!-- Style Css link -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+
+  <body onload="preloaderFunction()" class="">
+    <!-- Preloader section start -->
+    <div id="preloader">
+      <div class="loader"></div>
+    </div>
+    <!-- Preloader section end -->
+
+    <!-- Nav section start -->
+    <nav class="navbar sticky-top navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand logo" href="index.html"
+          ><img src="assets/img/logo/logo.webp" alt="ChainCity"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+        >
+          <i class="fa-light fa-list"></i>
+        </button>
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbar"
+        >
+          <div class="offcanvas-header">
+            <a class="navbar-brand" href="index.html"
+              ><img
+                class="logo"
+                src="assets/img/logo/logo.webp"
+                alt="ChainCity"
+            /></a>
+
+            <button
+              type="button"
+              class="cmn-btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            >
+              <i class="fa-light fa-arrow-right"></i>
+            </button>
+          </div>
+          <div
+            class="offcanvas-body align-items-center justify-content-between"
+          >
+            <ul class="navbar-nav m-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html"
+                  >home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="faq.html">faq</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="story.html">story</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="nav-right">
+          <ul class="custom-nav">
+            <li class="nav-item">
+              <div class="notification-panel">
+                <button class="dropdown-toggle">
+                  <i class="fa-regular fa-bell" aria-hidden="true"></i>
+                  <span class="count">3</span>
+                </button>
+                <ul class="notification-dropdown">
+                  <div class="dropdown-box">
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <i class="fal fa-bell" aria-hidden="true"></i>
+                        <div class="text">
+                          <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit.
+                          </p>
+                          <span class="time">4 Hours ago</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <i class="fal fa-bell" aria-hidden="true"></i>
+                        <div class="text">
+                          <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit.
+                          </p>
+                          <span class="time">6 Hours ago</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <i class="fal fa-bell" aria-hidden="true"></i>
+                        <div class="text">
+                          <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit.
+                          </p>
+                          <span class="time">1 Day ago</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <i class="fal fa-bell" aria-hidden="true"></i>
+                        <div class="text">
+                          <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit.
+                          </p>
+                          <span class="time">3 Days ago</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <i class="fal fa-bell" aria-hidden="true"></i>
+                        <div class="text">
+                          <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit.
+                          </p>
+                          <span class="time">4 Days ago</span>
+                        </div>
+                      </a>
+                    </li>
+                  </div>
+                  <div class="clear-all fixed-bottom">
+                    <a href="">Clear all</a>
+                  </div>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <div class="profile-box">
+                <div class="profile">
+                  <img
+                    src="./assets/img/person/1.jpg"
+                    class="img-fluid"
+                    alt="ChainCity"
+                  />
+                </div>
+                <ul class="user-dropdown">
+                  <li>
+                    <a href="user-panel.html">
+                      <i class="fal fa-user"></i> View Profile
+                    </a>
+                  </li>
+                  <li>
+                    <a href="support-ticket.html">
+                      <i class="fal fa-user-headset"></i> Support
+                    </a>
+                  </li>
+                  <li>
+                    <a href="edit-profile.html">
+                      <i class="fal fa-user-cog"></i> Account Settings
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <i class="fal fa-sign-out-alt"></i> Sign Out
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <!-- <li class="nav-item">
+                        <a class="nav-link login-btn" href="login.html">
+                            <i class="fa-regular fa-user"></i>
+                            login
+                        </a>
+                    </li> -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Nav section end -->
+
+    <!-- Bottom Mobile Tab nav section start -->
+    <ul class="nav bottom-nav fixed-bottom d-lg-none">
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          data-bs-toggle="offcanvas"
+          role="button"
+          aria-controls="offcanvasNavbar"
+          href="#offcanvasNavbar"
+          aria-current="page"
+          ><i class="fa-light fa-list"></i
+        ></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"
+          ><i class="fa-light fa-planet-ringed"></i
+        ></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active"><i class="fa-light fa-house"></i></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"
+          ><i class="fa-light fa-address-book"></i
+        ></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><i class="fa-light fa-user"></i></a>
+      </li>
+    </ul>
+    <!-- Bottom Mobile Tab nav section end -->
+
+    <!-- Banner section start -->
+    <div class="banner-section">
+      <div class="banner-section-inner">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div class="breadcrumb-area text-center">
+                <h3>Story details</h3>
+                <ul class="breadcrumb">
+                  <li class="breadcrumb-item">
+                    <a href="index.html"
+                      ><i class="fa-light fa-house"></i> Home</a
+                    >
+                  </li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    Story details
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Banner section end -->
+
+    <!-- Blog details section start -->
+    <section class="blog-details-section">
+      <div class="container">
+        <div class="row g-4 g-sm-5">
+          <div class="col-lg-7">
+            <div class="blog-box-large">
+              <div class="thumbs-area">
+                <img
+                  src="./assets/img/story-box/large-img.jpg"
+                  alt="Coinectra"
+                />
+              </div>
+              <div class="content-area mt-20">
+                <ul class="meta mb-15">
+                  <li class="item">
+                    <span class="icon"
+                      ><i class="fa-light fa-calendar-days"></i
+                    ></span>
+                    <span>20 Aug 2024</span>
+                  </li>
+                </ul>
+                <h3 class="blog-title">
+                  Exploring the Vibrant City of Bangkok
+                </h3>
+
+                <div class="para-text">
+                  <p>
+                    Share data on the carbon footprint of travel, eco-friendly
+                    destinations, and sustainable travel practices. Lorem ipsum
+                    dolor, sit amet consectetur adipisicing elit. Ratione,
+                    eligendi sapiente eveniet sequi consectetur quidem corporis
+                    quaerat repellendus aliquam fuga minus modi dolorum dolore,
+                    natus nihil molestias eius ad est.
+                  </p>
+                  <p>
+                    Share data on the carbon footprint of travel, eco-friendly
+                    destinations, and sustainable travel practices. Lorem ipsum
+                    dolor, sit amet consectetur adipisicing elit. Ratione,
+                    eligendi sapiente eveniet sequi consectetur quidem corporis
+                    quaerat repellendus aliquam fuga minus modi dolorum dolore
+                  </p>
+                  <p>
+                    Share data on the carbon footprint of travel, eco-friendly
+                    destinations, and sustainable travel practices. Lorem ipsum
+                    dolor, sit amet consectetur adipisicing elit. Ratione,
+                    eligendi sapiente eveniet sequi consectetur quidem corporis
+                    quaerat repellendus aliquam fuga minus modi dolorum dolore,
+                    natus nihil molestias eius ad est. Share data on the carbon
+                    footprint of travel, eco-friendly destinations, and
+                    sustainable travel practices. Lorem ipsum dolor, sit amet
+                    consectetur adipisicing elit.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="social-share-box">
+              <h4 class="title">social share :</h4>
+              <div id="shareBlock"></div>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="blog-sidebar">
+              <div class="sidebar-widget-area">
+                <h4 class="widget-title">Search</h4>
+                <div class="search-box">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Search here..."
+                  />
+                  <button type="submit" class="search-btn">
+                    <i class="far fa-search"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="sidebar-widget-area">
+                <h4 class="widget-title">Recent stories</h4>
+                <a href="" class="sidebar-widget-item">
+                  <div class="img-area">
+                    <img src="assets/img/products/1.jpg" alt="Coinectra" />
+                  </div>
+                  <div class="content-area">
+                    <div class="title">Discover Istanbul’s Timeless Charm</div>
+                    <div class="widget-date">
+                      <i class="fa-regular fa-calendar-days"></i> 01 November
+                      2022
+                    </div>
+                  </div>
+                </a>
+                <a href="" class="sidebar-widget-item">
+                  <div class="img-area">
+                    <img src="assets/img/products/2.jpg" alt="Coinectra" />
+                  </div>
+                  <div class="content-area">
+                    <div class="title">The Jewel of the Middle East</div>
+                    <div class="widget-date">
+                      <i class="fa-regular fa-calendar-days"></i> 01 November
+                      2022
+                    </div>
+                  </div>
+                </a>
+                <a href="" class="sidebar-widget-item">
+                  <div class="img-area">
+                    <img src="assets/img/products/3.jpg" alt="Coinectra" />
+                  </div>
+                  <div class="content-area">
+                    <div class="title">
+                      A Vibrant Tapestry of History and Modernity
+                    </div>
+                    <div class="widget-date">
+                      <i class="fa-regular fa-calendar-days"></i> 01 November
+                      2022
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="sidebar-widget-area">
+                <h4 class="widget-title">Tags</h4>
+                <div class="tag-list">
+                  <a href="" class="item">Exchange</a>
+                  <a href="" class="item"> Money</a>
+                  <a href="" class="item">Currency</a>
+                  <a href="" class="item">Risk</a>
+                  <a href="" class="item"> Paypal</a>
+                  <a href="" class="item"> Security</a>
+                  <a href="" class="item"> Business</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Blog details Section End -->
+
+    <!-- Footer Section start -->
+    <section class="footer-section">
+      <div class="container">
+        <div class="row gy-4 g-sm-5">
+          <div class="col-lg-4 col-sm-6">
+            <div class="footer-widget">
+              <div class="widget-logo">
+                <a href="#nav_area"
+                  ><img
+                    class="footer-logo"
+                    src="assets/img/logo/logo.webp"
+                    alt="Coinectra"
+                /></a>
+              </div>
+              <p>
+                Experience the Coinectra Advantage - Empowering Social Success
+                with Advanced, Data-Driven Solutions and Innovative Strategies.
+              </p>
+
+              <ul class="social-box mt-30">
+                <li>
+                  <a href="https://facebook.com" aria-label="Facebook"
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://twitter.com" aria-label="Twitter"
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://www.linkedin.com" aria-label="Linkedin"
+                    ><i class="fab fa-linkedin"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://instagram.com" aria-label="Instagram"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-2 col-sm-6">
+            <div class="footer-widget">
+              <h5 class="widget-title">Quick Links</h5>
+              <ul>
+                <li><a class="widget-link" href="about.html">About</a></li>
+                <li><a class="widget-link" href="faq.html">FAQ</a></li>
+                <li><a class="widget-link" href="index.html">Home</a></li>
+                <li><a class="widget-link" href="blog.html">Blog</a></li>
+                <li><a class="widget-link" href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 pt-sm-0 pt-3 ps-lg-5">
+            <div class="footer-widget">
+              <h5 class="widget-title">Company Policy</h5>
+              <ul>
+                <li>
+                  <a class="widget-link" href="policy.html">Privacy Policy</a>
+                </li>
+                <li><a class="widget-link" href="">Refund Policy</a></li>
+                <li><a class="widget-link" href="">Terms of use</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 pt-sm-0 pt-3">
+            <div class="footer-widget">
+              <h5 class="widget-title">Newsletter</h5>
+              <p>Subscribe To Our Mailing List And Stay Up To Date</p>
+              <form class="newsletter-form">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Your email"
+                />
+                <button type="button" class="subscribe-btn">
+                  <i class="fa-regular fa-paper-plane"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <hr class="cmn-hr" />
+        <!-- Copyright section start -->
+        <div class="copyright-area">
+          <div class="row gy-4">
+            <div class="col-sm-6">
+              <p class="mb-0">
+                Copyright ©2023
+                <a class="highlight" href="index.html">PTCPro</a> All Rights
+                Reserved
+              </p>
+            </div>
+            <div class="col-sm-6">
+              <div class="language">
+                <a href="" class="item active">English</a>
+                <a href="" class="item">Spanish</a>
+                <a href="" class="item">Germany</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Copyright section end -->
+      </div>
+    </section>
+    <!-- Footer Section end -->
+
+    <!-- Modal section start -->
+    <div
+      class="modal fade"
+      id="lang-currency-modal"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="staticBackdropLabel">
+              Select Language and Currency
+            </h4>
+            <button
+              type="button"
+              class="cmn-btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="fa-light fa-xmark"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row g-4">
+              <div class="col-12">
+                <div id="formModal">
+                  <label class="form-label">Select language</label>
+                  <select class="modal-select2-image" name="state">
+                    <option value="us">English</option>
+                    <option value="es">Spanish</option>
+                    <option value="bd">bangla</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-12">
+                <div id="formModal">
+                  <label class="form-label">Select currency</label>
+                  <select class="modal-select2-image" name="state">
+                    <option value="es">EUR</option>
+                    <option value="us">USD</option>
+                    <option value="bd">BDT</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer mt-10">
+            <!-- <button type="button" class="cmn-btn2" data-bs-dismiss="modal">Close</button> -->
+            <a href="" class="cmn-btn w-100 mt-10">save</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal section end -->
+
+    <!-- Jquery Js link -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap Js link -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Owl carausel Js link -->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!-- Swiper Js link -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <!-- select2 Js link -->
+    <script src="assets/js/select2.min.js"></script>
+
+    <!-- Social share Js link -->
+    <script src="assets/js/socialSharing.js"></script>
+
+    <!-- Main Js link -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
