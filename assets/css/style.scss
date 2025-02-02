@@ -354,6 +354,7 @@ body {
   line-height: 1.4;
   color: rgb(var(--body-color));
   font-size: 16px;
+  font-weight: 500;
 }
 
 @media (max-width: 991px) {
@@ -1144,6 +1145,7 @@ Reusable style section start
   flex-direction: column;
   box-shadow: var(--shadow4);
   gap: 15px;
+  height: 100%;
 
   .icon-box {
     width: 48px;
@@ -1153,7 +1155,7 @@ Reusable style section start
     align-items: center;
     justify-content: center;
     color: rgb(var(--primary-color));
-    font-size: 20px;
+    font-size: 22px;
     border-radius: 8px;
   }
   .text-box {
@@ -6106,6 +6108,82 @@ Calculator end
 ----------------------------------------------*/
 
 /*----------------------------------------------
+Custom radio container start
+----------------------------------------------*/
+.custom-radio-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+
+  .item {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+  }
+
+  .form-check-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: var(--transition);
+    gap: 15px;
+    border: 2px solid var(--border-color2);
+    background-color: rgb(var(--bg-color1));
+    font-family: var(--silkscreen-font);
+    color: rgb(var(--mostly-desaturated-dark-blue));
+    &:hover {
+      border-color: rgb(var(--primary-color));
+    }
+    .content-box {
+      .title {
+        text-transform: uppercase;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        img {
+          width: 24px;
+        }
+      }
+    }
+  }
+
+  .form-check-input {
+    position: absolute;
+    right: 15px;
+    margin-top: 0;
+    clip: rect(0, 0, 0, 0);
+    pointer-events: none;
+  }
+
+  .form-check-input[type="radio"]:checked + .form-check-label {
+    background-color: rgb(var(--primary-color), 0.1);
+    border-color: rgb(var(--primary-color));
+  }
+}
+
+// Responsive custom radio container start
+@media (max-width: 767px) {
+  .custom-radio-container {
+    margin-top: 30px;
+  }
+}
+
+// Responsive custom radio container end
+/*----------------------------------------------
+Custom radio container end
+----------------------------------------------*/
+
+/*----------------------------------------------
 About section start
 ----------------------------------------------*/
 .about-section {
@@ -6133,7 +6211,7 @@ Feature section start
   );
 }
 .feature-img-box {
-  max-width: 450px;
+  max-width: 400px;
 }
 /*----------------------------------------------
 Feature section end
@@ -6142,7 +6220,6 @@ Feature section end
 /*----------------------------------------------
 How it works section start
 ----------------------------------------------*/
-
 .working-steps {
   position: relative;
 }
@@ -6341,79 +6418,108 @@ How it works section end
 ----------------------------------------------*/
 
 /*----------------------------------------------
-Custom radio container start
+Why choose us section start
 ----------------------------------------------*/
-.custom-radio-container {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
-
-  .item {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-grow: 1;
-  }
-
-  .form-check-label {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    padding: 20px 16px;
-    cursor: pointer;
-    border-radius: 10px;
-    transition: var(--transition);
-    gap: 15px;
-    border: 2px solid var(--border-color2);
-    background-color: rgb(var(--bg-color1));
-    font-family: var(--silkscreen-font);
-    color: rgb(var(--mostly-desaturated-dark-blue));
-    &:hover {
-      border-color: rgb(var(--primary-color));
-    }
-    .content-box {
-      .title {
-        text-transform: uppercase;
-        font-weight: 500;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-
-        img {
-          width: 24px;
-        }
-      }
-    }
-  }
-
-  .form-check-input {
-    position: absolute;
-    right: 15px;
-    margin-top: 0;
-    clip: rect(0, 0, 0, 0);
-    pointer-events: none;
-  }
-
-  .form-check-input[type="radio"]:checked + .form-check-label {
-    background-color: rgb(var(--primary-color), 0.1);
-    border-color: rgb(var(--primary-color));
+.why-choose-us-section {
+  background-image: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(255, 169, 139, 0.1) 20%,
+    rgba(255, 169, 139, 0) 100%
+  );
+  background-attachment: fixed;
+  .cmn-box {
+    box-shadow: rgba(44, 91, 255, 0.1) 0px 12px 17px 0px;
+    border: 2px solid rgb(var(--primary-color), 0.2);
   }
 }
-
-// Responsive custom radio container start
-@media (max-width: 767px) {
-  .custom-radio-container {
-    margin-top: 30px;
-  }
-}
-
-// Responsive custom radio container end
 /*----------------------------------------------
-Custom radio container end
+Why choose us section end
+----------------------------------------------*/
+
+/*----------------------------------------------
+08. Testimonial section start
+----------------------------------------------*/
+.testimonial-section {
+  background-image: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(255, 169, 139, 0.1) 20%,
+    rgba(255, 169, 139, 0) 100%
+  );
+}
+.testimonial-box {
+  position: relative;
+  padding: 25px 20px 45px;
+  background: rgb(var(--bg-color1));
+  border-radius: 20px;
+  transition: var(--transition);
+  border: 2px solid rgb(var(--primary-color), 0.5);
+  box-shadow: rgba(44, 91, 255, 0.1) 0px 12px 17px 0px;
+  .text-box {
+    font-size: 20px;
+  }
+  .profile-box {
+    position: absolute;
+    bottom: -50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  .profile-title {
+    font-weight: 600;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  .profile-thumbs {
+    img {
+      width: 70px;
+      min-width: 70px;
+      height: 70px;
+      padding: 1px;
+      border-radius: 50%;
+      background-color: rgb(var(--white));
+      border: 2px solid rgb(var(--primary-color), 0.5);
+    }
+  }
+}
+
+.testimonial-carousel {
+  .item {
+    padding-bottom: 50px;
+    padding-top: 5px;
+  }
+}
+
+// Responsive testimonial section start
+@media (max-width: 991px) {
+  .testimonial-section {
+    .section-header {
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .testimonial-inner {
+    padding: 0;
+  }
+}
+
+// Responsive testimonial section end
+
+// Rtl testimonial section start
+.rtl {
+  @media (min-width: 1400px) {
+    .testimonial-section .left-side .img-box {
+      margin-left: -100px;
+      margin-right: 0;
+    }
+  }
+}
+
+// Rtl testimonial section start
+/*----------------------------------------------
+Testimonial end
 ----------------------------------------------*/
 
 /*----------------------------------------------
@@ -6424,8 +6530,8 @@ Custom radio container end
 
   .accordion-button {
     color: rgb(var(--heading-color));
-    font-weight: 500;
-    font-size: 18px;
+    font-weight: 600;
+    font-size: 20px;
     border-radius: 10px !important;
 
     &:focus {
@@ -6441,9 +6547,7 @@ Custom radio container end
 
   .accordion-item {
     margin: 10px 0;
-    border-radius: 10px;
     border: none;
-    background-color: var(--bg-color2);
   }
 
   .accordion-button {
@@ -6470,6 +6574,10 @@ Custom radio container end
         border-radius: 5px;
       }
     }
+  }
+  .accordion-body {
+    font-size: 18px;
+    color: rgb(var(--body-color));
   }
 }
 

@@ -24,8 +24,9 @@ $(document).ready(function () {
   $(".testimonial-carousel").owlCarousel({
     loop: true,
     autoplay: true,
-    margin: 20,
+    margin: 50,
     autoplayTimeout: 2000,
+    nav: false,
     navText: [
       "<i class='fa-regular fa-angle-left'></i>",
       "<i class='fa-regular fa-angle-right'></i>",
@@ -48,8 +49,8 @@ $(document).ready(function () {
         dots: false,
       },
       1000: {
-        items: 1,
-        nav: true,
+        items: 2,
+        // nav: true,
         dots: false,
       },
     },
