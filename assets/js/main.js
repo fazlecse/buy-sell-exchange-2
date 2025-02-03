@@ -44,13 +44,11 @@ $(document).ready(function () {
         dotsEach: 2,
       },
       768: {
-        items: 1,
-        nav: true,
+        items: 2,
         dots: false,
       },
       1000: {
         items: 2,
-        // nav: true,
         dots: false,
       },
     },
