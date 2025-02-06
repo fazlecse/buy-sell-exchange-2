@@ -4,10 +4,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="GameMart is your ultimate platform for purchasing top-ups, gift cards, and in-game currencies. Elevate your gaming experience with fast, reliable, and exclusive deals designed for gamers worldwide."
-    />
 
     <title>Coinectra</title>
     <!-- Favicon link -->
@@ -265,52 +261,52 @@
         <div class="row g-4 g-sm-5 align-items-center">
           <div class="col-xxl-5 col-lg-6">
             <form class="calculator">
-              <div class="banner-slider">
+              <div
+                class="banner-slider"
+                data-bs-toggle="modal"
+                data-bs-target="#announcement-modal"
+              >
                 <div class="calculator-banner">
-                  <a href="">
-                    <div class="calculator-banner-wrapper">
-                      <div class="left-side">
-                        <div class="image-area">
-                          <img
-                            src="./assets/img/calculator/popularPairBanner.png"
-                            alt=""
-                          />
-                        </div>
-                        <div class="text-area">
-                          <p class="mb-0">
-                            Hottest rates for
-                            <strong> USDT/BTC, USDT/ETH</strong> swaps
-                          </p>
-                        </div>
+                  <div class="calculator-banner-wrapper">
+                    <div class="left-side">
+                      <div class="image-area">
+                        <img
+                          src="./assets/img/calculator/popularPairBanner.png"
+                          alt=""
+                        />
                       </div>
-                      <div class="right-side">
-                        <i class="fa-regular fa-angle-right"></i>
+                      <div class="text-area">
+                        <p class="mb-0">
+                          Hottest rates for
+                          <strong> USDT/BTC, USDT/ETH</strong> swaps
+                        </p>
                       </div>
                     </div>
-                  </a>
+                    <div class="right-side">
+                      <i class="fa-regular fa-angle-right"></i>
+                    </div>
+                  </div>
                 </div>
                 <div class="calculator-banner">
-                  <a href="">
-                    <div class="calculator-banner-wrapper">
-                      <div class="left-side">
-                        <div class="image-area">
-                          <img
-                            src="./assets/img/calculator/stablecoinRateBanner.png"
-                            alt=""
-                          />
-                        </div>
-                        <div class="text-area">
-                          <p class="mb-0">
-                            Hottest rates for
-                            <strong> USDT/BTC, USDT/ETH</strong> swaps
-                          </p>
-                        </div>
+                  <div class="calculator-banner-wrapper">
+                    <div class="left-side">
+                      <div class="image-area">
+                        <img
+                          src="./assets/img/calculator/stablecoinRateBanner.png"
+                          alt=""
+                        />
                       </div>
-                      <div class="right-side">
-                        <i class="fa-regular fa-angle-right"></i>
+                      <div class="text-area">
+                        <p class="mb-0">
+                          Hottest rates for
+                          <strong> USDT/BTC, USDT/ETH</strong> swaps
+                        </p>
                       </div>
                     </div>
-                  </a>
+                    <div class="right-side">
+                      <i class="fa-regular fa-angle-right"></i>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="calculator-body">
@@ -419,7 +415,12 @@
                     </div>
                   </div>
                 </div>
-                <button type="button" class="cmn-btn w-100">
+                <button
+                  type="button"
+                  class="cmn-btn w-100"
+                  data-bs-toggle="modal"
+                  data-bs-target="#calculator-modal"
+                >
                   <div class="text-box">Buy Now</div>
                   <i class="fa-regular fa-angle-right"></i>
                 </button>
@@ -498,7 +499,7 @@
                 individuals to explore the exciting world of digital currencies.
               </p>
               <a href="" class="cmn-btn mt-20"
-                ><div class="text">get started</div>
+                ><div class="text-box">get started</div>
                 <i class="fa-regular fa-angle-right"></i
               ></a>
             </div>
@@ -1043,7 +1044,7 @@
             </p>
           </div>
         </div>
-        <div class="mt-40">
+        <div class="mt-30">
           <div class="row g-4 g-xl-5 justify-content-center">
             <div class="col-lg-4 col-md-6">
               <div class="blog-box">
@@ -1320,9 +1321,10 @@
     <!-- Footer Section end -->
 
     <!-- Modal section start -->
+    <!-- Announcement modal start -->
     <div
-      class="modal fade"
-      id="lang-currency-modal"
+      class="modal fade announcement-modal"
+      id="announcement-modal"
       data-bs-keyboard="false"
       tabindex="-1"
       aria-labelledby="staticBackdropLabel"
@@ -1331,9 +1333,7 @@
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h4 class="modal-title" id="staticBackdropLabel">
-              Select Language and Currency
-            </h4>
+            <h4 class="modal-title" id="staticBackdropLabel"></h4>
             <button
               type="button"
               class="cmn-btn-close"
@@ -1343,46 +1343,202 @@
               <i class="fa-light fa-xmark"></i>
             </button>
           </div>
-          <div class="modal-body">
-            <div class="row g-4">
-              <div class="col-12">
-                <div id="formModal">
-                  <label class="form-label">Select language</label>
-                  <select class="modal-select2-image" name="state">
-                    <option value="us">English</option>
-                    <option value="es">Spanish</option>
-                    <option value="bd">bangla</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-12">
-                <div id="formModal">
-                  <label class="form-label">Select currency</label>
-                  <select class="modal-select2-image" name="state">
-                    <option value="es">EUR</option>
-                    <option value="us">USD</option>
-                    <option value="bd">BDT</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="modal-footer mt-10">
-            <!-- <button type="button" class="cmn-btn2" data-bs-dismiss="modal">Close</button> -->
-            <a href="" class="cmn-btn w-100 mt-10">save</a>
+          <div class="modal-body text-center">
+            <h4>Hottest rates for USDT/BTC, USDT/ETH swaps</h4>
+            <p>
+              Enjoy a cost-effective way to swap the same stablecoin
+              cross-chain, at a 1:1 exchange rate.
+            </p>
+            <p>
+              For example, you can convert <b>USDT-ERC20</b> to<b> USDT-TRC20</b
+              >.
+            </p>
+            <p>Please note that network and service fees apply.</p>
+            <p>
+              <b>
+                Stablecoins participating in the promotion: USDT, USDC, TUSD.</b
+              >
+            </p>
           </div>
         </div>
       </div>
     </div>
+    <!-- Announcement modal end -->
+
+    <!-- Calculator modal start -->
+    <div
+      class="modal calculator-modal"
+      id="calculator-modal"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="cmn-btn-close calculator-sidebar-btn">
+              <i class="fa-sharp fa-regular fa-bars-staggered"></i>
+            </button>
+            <div class="calculator-modal-logo">
+              <img src="./assets/img/logo/logo.webp" alt="" />
+            </div>
+            <button
+              type="button"
+              class="cmn-btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="fa-light fa-xmark"></i>
+            </button>
+          </div>
+          <div class="modal-body pt-10">
+            <div>
+              <label class="form-label" for="You-send">You send</label>
+              <div class="input-box">
+                <input type="text" class="form-control" id="You-send" />
+                <div class="input-dropdown-toggle">
+                  <div class="img-box">
+                    <img src="./assets/img/crypto-icon/btc.svg" alt="" />
+                  </div>
+                  <div class="text-box">
+                    <div class="d-flex align-items-center gap-2">
+                      <div class="title">BTC</div>
+                      <i class="fa-regular fa-angle-down"></i>
+                    </div>
+                    <div class="sub-title">bitcoin</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swap-area">
+              <div class="swap-icon" id="swapBtn">
+                <i class="fa-regular fa-arrow-up-arrow-down"></i>
+              </div>
+            </div>
+            <div>
+              <label class="form-label" for="You-get">You get</label>
+              <div class="input-box">
+                <input type="text" class="form-control" id="You-get" />
+                <div class="input-dropdown-toggle">
+                  <div class="img-box">
+                    <img src="./assets/img/crypto-icon/xrp.svg" alt="" />
+                  </div>
+                  <div class="text-box">
+                    <div class="d-flex align-items-center gap-2">
+                      <div class="title">xrp</div>
+                      <i class="fa-regular fa-angle-down"></i>
+                    </div>
+                    <div class="sub-title">XRP</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="transaction-summery">
+              <h6 class="mb-20 highlight">You get 113058.70552259 XRP</h6>
+              <div class="cmn-list">
+                <div class="item">
+                  <span>You send</span>
+                  <span>1.00000000 BTC</span>
+                </div>
+                <div class="item">
+                  <span>Exchange rate</span>
+                  <span>1 BTC ~ 113060.96774194 XRP</span>
+                </div>
+                <div class="item">
+                  <span>Service fee</span>
+                  <span>0.00100000 XRP</span>
+                </div>
+                <div class="item">
+                  <span>Network fee 0.002%</span>
+                  <span>2.26121935 XRP</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="cmn-btn w-100 m-0">
+              <div class="text-box">Exchage now</div>
+              <i class="fa-regular fa-angle-right"></i>
+            </button>
+          </div>
+          <!-- Calculator sidebar start -->
+          <div id="calculator-sidebar" class="calculator-sidebar">
+            <div class="calculator-sidebar-inner">
+              <div class="calculator-sidebar-header d-flex justify-content-end">
+                <button
+                  type="button"
+                  class="cmn-btn-close calculator-sidebar-btn"
+                >
+                  <i class="fa-regular fa-xmark"></i>
+                </button>
+              </div>
+              <div class="calculator-sidebar-body">
+                <ul class="nav flex-column">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#">
+                      <i class="fa-regular fa-arrow-down"></i>
+                      Buy
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">
+                      <i class="fa-regular fa-arrow-up"></i>
+                      sell
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">
+                      <i class="fa-regular fa-arrow-right-arrow-left"></i>
+                      exchange</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Calculator sidebar end -->
+
+          <!-- Currency select sidebar start -->
+          <div id="currency-select-sidebar" class="currency-select-sidebar">
+            <div class="currency-select-sidebar-header d-flex flex-column">
+              <div
+                class="d-flex align-items-center justify-content-between gap-2"
+              >
+                <h5 class="mb-0">Select a currency</h5>
+                <button
+                  type="button"
+                  class="cmn-btn-close currency-select-sidebar-btn"
+                >
+                  <i class="fa-regular fa-xmark"></i>
+                </button>
+              </div>
+              <div class="search-box3 mt-10">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Search here..."
+                />
+                <span class="search-btn">
+                  <i class="far fa-search"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+          <!-- Currency select sidebar end -->
+        </div>
+      </div>
+    </div>
+    <!-- Calculator modal end -->
+
     <!-- Modal section end -->
 
     <script>
+      // Calculator button toggle active start
       document.addEventListener("DOMContentLoaded", function () {
         const calculatorBtns = document.querySelectorAll(
           ".calculator-top-button-box .single-button"
         );
-        console.log(calculatorBtns);
         calculatorBtns.forEach((calculatorBtn) => {
           calculatorBtn.addEventListener("click", () => {
             calculatorBtns.forEach((btn) => btn.classList.remove("active"));
@@ -1390,6 +1546,45 @@
           });
         });
       });
+      // Calculator button toggle active end
+
+      // Calculator sidebar toggle active start
+      document.addEventListener("DOMContentLoaded", function () {
+        const SidebarToggleBtns = document.querySelectorAll(
+          ".calculator-sidebar-btn"
+        );
+        const sidebar = document.querySelector("#calculator-sidebar");
+
+        SidebarToggleBtns.forEach((SidebarToggleBtn) => {
+          SidebarToggleBtn.addEventListener("click", () => {
+            sidebar.classList.toggle("active");
+          });
+        });
+      });
+      // Calculator sidebar toggle active end
+
+      // Currency select sidebar start
+      document.addEventListener("DOMContentLoaded", function () {
+        const inputDropdownToggles = document.querySelectorAll(
+          ".input-dropdown-toggle"
+        );
+        const currencySelectSidebar = document.querySelector(
+          "#currency-select-sidebar"
+        );
+        const currencySelectSidebarBtn = document.querySelector(
+          ".currency-select-sidebar-btn"
+        );
+        inputDropdownToggles.forEach((inputDropdownToggle) => {
+          inputDropdownToggle.addEventListener("click", () => {
+            currencySelectSidebar.classList.toggle("active");
+          });
+        });
+        currencySelectSidebarBtn.addEventListener("click", () => {
+          console.log("currencySelectSidebarBtnclied");
+          currencySelectSidebarBtn.classList.toggle("active");
+        });
+      });
+      // Currency select sidebar end
     </script>
 
     <!-- Jquery Js link -->

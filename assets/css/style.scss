@@ -73,7 +73,8 @@ Typography
   --input-color2: #ffffff;
   --bg-color1: 255, 255, 255;
   --bg-color2: 249, 250, 251;
-  --bg-color3: 14, 15, 20;
+  --bg-color3: 245, 245, 245;
+  --bg-color4: 14, 15, 20;
   --border-color1: rgba(231, 234, 243, 0.7);
   --border-color2: rgba(140, 152, 164, 0.25);
   --shadow1: 0 0.375rem 0.75rem rgba(140, 152, 164, 0.075);
@@ -305,7 +306,7 @@ h2 {
 h3 {
   font-size: 28px;
   margin-bottom: 5px;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 @media (max-width: 991px) {
@@ -317,7 +318,7 @@ h3 {
 h4 {
   font-size: 24px;
   margin-bottom: 5px;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 @media (max-width: 991px) {
@@ -404,10 +405,10 @@ option {
 
 .form-control,
 .form-select {
-  border-radius: 9999px;
+  border-radius: 10px;
   background-color: var(--input-color);
-  border: 1px solid var(--border-color1);
-  height: 45px;
+  border: 2px solid var(--border-color1);
+  height: 50px;
 
   &::placeholder {
     color: rgb(var(--body-color));
@@ -415,7 +416,7 @@ option {
 
   &:focus {
     box-shadow: none;
-    border: 1px solid rgb(var(--primary-color));
+    border: 2px solid rgb(var(--primary-color));
     background-color: rgb(var(--bg-color1));
   }
 }
@@ -491,7 +492,7 @@ intlTelInput section start
 
 .iti--separate-dial-code .iti__selected-flag {
   background-color: rgb(var(--primary-color), 0.1);
-  border-radius: 9999px;
+  border-radius: 10px;
 }
 
 .iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag {
@@ -721,7 +722,7 @@ Breadcrumb start
   margin-bottom: 0;
 
   .breadcrumb-item {
-    font-weight: 500;
+    font-weight: 600;
 
     + {
       .breadcrumb-item {
@@ -852,12 +853,12 @@ body::-webkit-scrollbar-thumb {
 }
 
 .modal-footer {
-  padding: 16px 30px;
+  padding: 16px 30px 20px;
 }
 
 .modal-header {
   border-bottom: 1px solid var(--border-color2);
-  padding: 12px 16px 5px;
+  padding: 20px 30px;
   border-bottom: none;
 
   .modal-title {
@@ -874,27 +875,193 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media (min-width: 576px) {
-  .modal-dialog {
-    max-width: 580px;
-  }
-
   .modal-body {
-    padding: 0 30px 20px;
+    padding: 20px 30px;
   }
 }
 
 // Modal section end
 
-// Language currency modal start
-@media (min-width: 576px) {
-  #lang-currency-modal {
-    .modal-content {
-      padding: 20px 40px;
+// Announcement modal start
+.announcement-modal .modal-content {
+  background: linear-gradient(
+      308deg,
+      #cef 14.16%,
+      rgba(238, 239, 255, 0) 49.73%,
+      #feddf5 97.86%
+    ),
+    #eef3ff;
+}
+// Announcement modal end
+
+// Calculator modal start
+.calculator-modal {
+  background-color: rgb(var(--bg-color3), 0.9);
+  background-color: rgb(var(--bg-color4), 0.9);
+  .modal-content {
+    position: relative;
+  }
+  .input-box {
+    position: relative;
+  }
+  .modal-body {
+    .form-control {
+      height: 56px;
+      padding-right: 120px;
+      font-size: 24px;
     }
   }
 }
 
-// Language currency modal end
+.input-dropdown-toggle {
+  position: absolute;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  height: calc(100% - 8px);
+  background-color: rgb(var(--bg-color3));
+  top: 50%;
+  transform: translateY(-50%);
+  right: 4px;
+  padding: 12px;
+  border-radius: 6px;
+  transition: var(--transition);
+  cursor: pointer;
+  &:hover {
+    background-color: rgb(var(--bg-color2));
+  }
+  .img-box {
+    width: 28px;
+    min-width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1px solid var(--border-color2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .text-box {
+    .title {
+      font-size: 15px;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: rgb(var(--heading-color));
+    }
+    .sub-title {
+      font-size: 13px;
+      text-transform: capitalize;
+    }
+  }
+}
+.calculator-modal-logo {
+  max-width: 150px;
+}
+.swap-area {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin: 15px 40px -13px 0;
+}
+.swap-area .swap-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: rgb(var(--bg-color3));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.swap-area .swap-icon:hover i {
+  transform: scale(1.2) rotate(5deg);
+  color: rgb(var(--primary-color));
+}
+.transaction-summery {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: rgb(var(--bg-color3));
+  border-radius: 10px;
+}
+// Calculator modal end
+
+// Calculator sidebar start
+
+.calculator-sidebar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateX(-100%);
+  transition: var(--transition);
+  width: 320px;
+  z-index: 0;
+  &.active {
+    transform: none;
+    &::after {
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      content: "";
+      background-color: rgb(var(--bg-color4), 0.9);
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+  }
+  .nav-item {
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+  .nav-link {
+    text-transform: capitalize;
+    color: rgb(var(--heading-color));
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    gap: 10px;
+    &.active,
+    &:hover {
+      background-color: rgb(var(--bg-color3));
+      color: rgb(var(--primary-color));
+    }
+  }
+}
+
+.calculator-sidebar-header {
+  padding: 15px 20px;
+  border-bottom: 1px solid var(--border-color1);
+}
+.calculator-sidebar-body {
+  padding: 20px;
+}
+.calculator-sidebar-inner {
+  background-color: rgb(var(--bg-color1));
+  height: 100%;
+  overflow: auto;
+}
+// Calculator sidebar end
+
+// Currency select sidebar start
+.currency-select-sidebar{
+  background-color: rgb(var(--bg-color1)); 
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  transform: translateY(100%);
+  transition: var(--transition);
+  &.active{
+    transform: none;
+  }
+}
+.currency-select-sidebar-header{
+  padding: 15px 20px;
+  border-bottom: 1px solid var(--border-color1);
+}
+// Currency select sidebar end
 
 // Cmn-btn-start
 
@@ -910,13 +1077,16 @@ body::-webkit-scrollbar-thumb {
   opacity: 1;
   box-shadow: none;
   border-radius: 6px;
-  transition: var(--transition);
+  transition: background-color 0.3s ease-in-out;
   color: rgb(var(--body-color));
-}
-
-.cmn-btn-close:hover {
-  background-color: rgb(var(--primary-color), 0.1);
-  color: rgb(var(--primary-color));
+  &:hover {
+    background-color: rgb(var(--primary-color), 0.1);
+    color: rgb(var(--primary-color));
+  }
+  &:focus {
+    border-color: rgb(var(--primary-color));
+    outline: 1px solid rgb(var(--primary-color)) !important;
+  }
 }
 
 // Cmn btn end
@@ -1476,13 +1646,9 @@ Reusable style section start
     background-color: rgb(var(--bg-color1));
     border-radius: 4px;
     height: 50px;
-    border-radius: 9999px;
+    border-radius: 10px;
     padding: 6px 45px 6px 12px;
     box-shadow: var(--shadow1);
-
-    &:focus {
-      outline: 1px solid rgb(var(--primary-color));
-    }
   }
 
   .search-btn {
@@ -2087,7 +2253,7 @@ Offcanvas end
   gap: 5px;
   font-weight: 500;
   color: rgb(var(--heading-color));
-  border-radius: 9999px;
+  border-radius: 10px;
 
   &:hover {
     color: rgb(var(--primary-color));
@@ -3034,15 +3200,16 @@ hr.divider:after {
 
 .cmn-list {
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  column-gap: 15px;
-  row-gap: 5px;
+  flex-direction: column;
+  row-gap: 8px;
 
   .item {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 5px;
+    color: rgb(var(--heading-color));
+    font-size: 14px;
   }
 }
 
@@ -5527,6 +5694,9 @@ end
 /*----------------------------------------------
 Padding top start
 ----------------------------------------------*/
+.pt-10 {
+  padding-top: 15px;
+}
 .pt-15 {
   padding-top: 15px;
 }
@@ -5718,6 +5888,10 @@ Padding bottom
     &:hover {
       background-color: rgb(var(--primary-color), 0.1);
       color: rgb(var(--primary-color));
+    }
+    &:focus {
+      border-color: rgb(var(--primary-color));
+      outline: 1px solid rgb(var(--primary-color));
     }
   }
 
@@ -5959,6 +6133,7 @@ Hero section end
   overflow: hidden;
   border-radius: 10px 10px 0 0;
   padding: 26px 16px;
+  cursor: pointer;
   background: linear-gradient(
       271deg,
       #ebfedd 9.24%,
@@ -6833,7 +7008,7 @@ Newsletter end
   position: relative;
   z-index: 0;
   padding-bottom: 40px;
-  background-color: rgb(var(--bg-color3));
+  background-color: rgb(var(--bg-color4));
   color: rgb(var(--white), 0.9);
 
   .footer-widget {
@@ -6980,12 +7155,12 @@ Copyright end
 ----------------------------------------------*/
 .banner-section {
   position: relative;
-  padding: 80px 0;
+  padding: 30px 0;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 0;
-  background-color: var(--bg-color3);
+  background-color: rgb(var(--bg-color2));
 
   .img-box {
     max-width: 300px;
@@ -7047,11 +7222,6 @@ Copyright end
 }
 
 // Responsive banner section start
-@media (min-width: 768px) {
-  .banner-section .img-box {
-    margin-bottom: -50px;
-  }
-}
 
 @media (max-width: 991px) {
   .banner-section h3 {
@@ -7060,12 +7230,6 @@ Copyright end
 
   .breadcrumb-area {
     font-size: 16px;
-  }
-}
-
-@media (max-width: 767px) {
-  .banner-section {
-    padding: 40px;
   }
 }
 
@@ -7091,8 +7255,6 @@ Banner end
 }
 
 .contact-area {
-  padding: 20px;
-
   .thumbs-area {
     max-width: 250px;
     margin: auto;
@@ -7167,16 +7329,14 @@ Contact section end
   padding: 30px;
   z-index: 1;
   position: relative;
-  background-color: var(--bg-color2);
+  background-color: rgb(var(--bg-color1));
   border-radius: 20px;
+  border: 1px solid var(--border-color1);
+  box-shadow: var(--shadow1);
 
   .logo-area {
     margin-bottom: 20px;
     display: inline-flex;
-  }
-
-  .cmn-btn {
-    height: 45px;
   }
 
   .cmn-btn2 {
