@@ -1501,27 +1501,172 @@
 
           <!-- Currency select sidebar start -->
           <div id="currency-select-sidebar" class="currency-select-sidebar">
-            <div class="currency-select-sidebar-header d-flex flex-column">
-              <div
-                class="d-flex align-items-center justify-content-between gap-2"
-              >
-                <h5 class="mb-0">Select a currency</h5>
-                <button
-                  type="button"
-                  class="cmn-btn-close currency-select-sidebar-btn"
+            <div class="currency-select-sidebar-inner">
+              <div class="currency-select-sidebar-header d-flex flex-column">
+                <div
+                  class="d-flex align-items-center justify-content-between gap-2"
                 >
-                  <i class="fa-regular fa-xmark"></i>
-                </button>
+                  <h5 class="mb-0">Select a currency</h5>
+                  <button
+                    type="button"
+                    class="cmn-btn-close currency-select-sidebar-btn"
+                  >
+                    <i class="fa-regular fa-xmark"></i>
+                  </button>
+                </div>
+                <div class="search-box3 mt-10">
+                  <input
+                    id="search-input"
+                    type="search"
+                    class="form-control"
+                    placeholder="Search here..."
+                  />
+                  <span class="search-btn">
+                    <i class="far fa-search"></i>
+                  </span>
+                </div>
               </div>
-              <div class="search-box3 mt-10">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Search here..."
-                />
-                <span class="search-btn">
-                  <i class="far fa-search"></i>
-                </span>
+              <div class="currency-select-sidebar-body">
+                <div id="currency-list" class="currency-list">
+                  <div class="item">
+                    <div class="left-side">
+                      <div class="img-area">
+                        <img
+                          class="img-flag"
+                          src="./assets/img/crypto-icon/btc.svg"
+                          alt=""
+                        />
+                      </div>
+                      <div class="text-area">
+                        <div class="title">btc</div>
+                        <div class="sub-title">Bitcoin</div>
+                      </div>
+                    </div>
+                    <div class="right-side">
+                      <i class="fa-sharp fa-solid fa-circle-check"></i>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="left-side">
+                      <div class="img-area">
+                        <img
+                          class="img-flag"
+                          src="./assets/img/crypto-icon/eth.svg"
+                          alt=""
+                        />
+                      </div>
+                      <div class="text-area">
+                        <div class="title">ave</div>
+                        <div class="sub-title">Ethereum</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="left-side">
+                      <div class="img-area">
+                        <img
+                          class="img-flag"
+                          src="./assets/img/crypto-icon/usdt.svg"
+                          alt=""
+                        />
+                      </div>
+                      <div class="text-area">
+                        <div class="title">USDT20</div>
+                        <div class="sub-title">Tether ERC20</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="left-side">
+                      <div class="img-area">
+                        <img
+                          class="img-flag"
+                          src="./assets/img/crypto-icon/sol.svg"
+                          alt=""
+                        />
+                      </div>
+                      <div class="text-area">
+                        <div class="title">sol</div>
+                        <div class="sub-title">solana</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="left-side">
+                      <div class="img-area">
+                        <img
+                          class="img-flag"
+                          src="./assets/img/crypto-icon/1inch.svg"
+                          alt=""
+                        />
+                      </div>
+                      <div class="text-area">
+                        <div class="title">1inch</div>
+                        <div class="sub-title">1inch (ERC20)</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="left-side">
+                      <div class="img-area">
+                        <img
+                          class="img-flag"
+                          src="./assets/img/crypto-icon/aave.svg"
+                          alt=""
+                        />
+                      </div>
+                      <div class="text-area">
+                        <div class="title">AAVE</div>
+                        <div class="sub-title">Aave (ERC20)</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="left-side">
+                      <div class="img-area">
+                        <img
+                          class="img-flag"
+                          src="./assets/img/crypto-icon/abt.svg"
+                          alt=""
+                        />
+                      </div>
+                      <div class="text-area">
+                        <div class="title">ABT</div>
+                        <div class="sub-title">Arcblock (ERC20)</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="left-side">
+                      <div class="img-area">
+                        <img
+                          class="img-flag"
+                          src="./assets/img/crypto-icon/act.svg"
+                          alt=""
+                        />
+                      </div>
+                      <div class="text-area">
+                        <div class="title">act</div>
+                        <div class="sub-title">Achain</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="left-side">
+                      <div class="img-area">
+                        <img
+                          class="img-flag"
+                          src="./assets/img/crypto-icon/ada.svg"
+                          alt=""
+                        />
+                      </div>
+                      <div class="text-area">
+                        <div class="title">ada</div>
+                        <div class="sub-title">Cardano</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -1580,11 +1725,36 @@
           });
         });
         currencySelectSidebarBtn.addEventListener("click", () => {
-          console.log("currencySelectSidebarBtnclied");
-          currencySelectSidebarBtn.classList.toggle("active");
+          currencySelectSidebar.classList.toggle("active");
         });
       });
       // Currency select sidebar end
+
+      // Filter section start
+      function filterItems(inputId, items) {
+        inputId.addEventListener("keyup", () => {
+          let filter, title, subtitle, txtValue;
+          filter = inputId.value.toUpperCase();
+          items.forEach(function (item) {
+            title = item.querySelector(".title");
+            subtitle = item.querySelector(".sub-title");
+
+            txtValue = title.textContent || title.innerText;
+            txtValue += " " + (subtitle.textContent || subtitle.innerText);
+
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              item.style.display = "";
+            } else {
+              item.style.display = "none";
+            }
+          });
+        });
+      }
+      const inputId = document.getElementById("search-input");
+      const items = document.querySelectorAll("#currency-list .item");
+
+      filterItems(inputId, items);
+      // Filter section end
     </script>
 
     <!-- Jquery Js link -->

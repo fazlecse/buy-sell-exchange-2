@@ -882,7 +882,8 @@ body::-webkit-scrollbar-thumb:hover {
   left: 0;
   transform: translateX(-100%);
   transition: var(--transition);
-  width: 320px;
+  width: 100%;
+  max-width: 320px;
   z-index: 0;
 }
 .calculator-sidebar.active {
@@ -942,10 +943,66 @@ body::-webkit-scrollbar-thumb:hover {
 .currency-select-sidebar.active {
   transform: none;
 }
+.currency-select-sidebar.active::after {
+  content: "";
+  background-color: rgb(var(--bg-color4), 0.9);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
 
 .currency-select-sidebar-header {
   padding: 15px 20px;
   border-bottom: 1px solid var(--border-color1);
+}
+
+.currency-select-sidebar-body {
+  padding: 20px;
+  max-height: 500px;
+  overflow: auto;
+}
+
+.currency-select-sidebar-inner {
+  background-color: rgb(var(--bg-color1));
+  height: 100%;
+}
+
+.currency-list .item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.currency-list .item:hover {
+  background-color: rgb(var(--primary-color), 0.1);
+}
+.currency-list .item:not(:last-child) {
+  border-bottom: 1px solid var(--border-color1);
+}
+.currency-list .left-side {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.currency-list .left-side .text-area {
+  font-size: 13px;
+}
+.currency-list .left-side .text-area .title {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 600;
+}
+.currency-list .left-side .text-area .sub-title {
+  text-transform: capitalize;
+}
+.currency-list .right-side i {
+  font-size: 20px;
+  color: rgb(var(--primary-color));
 }
 
 .cmn-btn-close {
@@ -2311,31 +2368,38 @@ Alerts end
 Cmn tab section start
 ----------------------------------------------*/
 .cmn-tabs .nav-pills {
-  display: inline-flex;
   gap: 10px;
-  background-color: var(--bg-color2);
-  padding: 7px;
-  border-radius: 40px;
+  background-color: rgb(var(--bg-color3));
+  padding: 4px;
+  border-radius: 10px;
+  flex-grow: 1;
+  max-width: 500px;
+}
+
+.cmn-tabs .nav-item {
+  flex-grow: 1;
 }
 
 .cmn-tabs .nav-pills .nav-link {
-  padding: 8px 20px;
+  padding: 12px;
   text-transform: capitalize;
-  color: rgb(var(--heading-color));
   font-family: var(--heading-font);
+  color: rgb(var(--body-color));
+  color: rgb(var(--Very-dark-grayish-blue));
   width: 100%;
-  border-radius: 9999px;
+  border-radius: 8px;
   font-size: 16px;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 7px;
   font-weight: 500;
 }
 
 .cmn-tabs .nav-pills .nav-link.active,
 .cmn-tabs .nav-pills .show > .nav-link {
-  background: rgb(var(--primary-color));
-  color: rgb(var(--white));
+  background: rgb(var(--white));
+  color: rgb(var(--heading-color));
 }
 
 /*----------------------------------------------
