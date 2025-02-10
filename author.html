@@ -80,13 +80,13 @@
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="about.html">about</a>
+                <a class="nav-link" href="about.html">about</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="feature.html">feature</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="blog.html">blog</a>
+                <a class="nav-link active" href="blog.html">blog</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="faq.html">faq</a>
@@ -250,309 +250,269 @@
       </li>
     </ul>
     <!-- Bottom Mobile Tab nav section end -->
-    <!-- Calculate details section start -->
-    <section class="calculator-details-section">
-      <div class="container">
-        <div class="row g-xl-5 g-4 justify-content-center">
-          <div class="col-lg-3 order-2 order-lg-1">
-            <div class="progress-section">
-              <h6>Provide address information to create a transaction</h6>
-              <div
-                class="progress"
-                role="progressbar"
-                aria-label="Example with label"
-                aria-valuenow="25"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              >
-                <div class="progress-bar" style="width: 25%"></div>
-              </div>
-              <div class="progress-step-area">
-                <div class="item">
-                  <div class="icon-area checkmark">
-                    <i class="fa-light fa-check"></i>
-                  </div>
-                  <div class="content-area">
-                    <h6>Exchange pair</h6>
-                    <span>Set the preferred exchange pair</span>
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="icon-area">
-                    <i class="fa-light fa-arrow-right"></i>
-                  </div>
-                  <div class="content-area">
-                    <h6>Wallet address</h6>
-                    <span>Fill in the crypto wallet address details</span>
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="number">3</div>
-                  <div class="content-area">
-                    <h6>Payment</h6>
-                    <span>Deposit the amount required for the exchange</span>
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="number">4</div>
-                  <div class="content-area">
-                    <h6>Exchange</h6>
-                    <span>Wait for your transaction to be completed</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-5 order-1 order-lg-2">
-            <form class="calculator mw-100">
-              <div class="calculator-body">
-                <div class="calculator-top-button-box">
-                  <button type="button" class="single-button active">
-                    Buy
-                  </button>
-                  <button type="button" class="single-button">sell</button>
-                  <button type="button" class="single-button">exchange</button>
-                </div>
-                <div class="calculator-middle-button-box">
-                  <div class="custom-radio-container">
-                    <div class="item">
-                      <input
-                        class="form-check-input"
-                        type="radio"
-                        name="flexRadioDefault"
-                        id="btc"
-                        checked=""
-                      />
-                      <label class="form-check-label" for="btc">
-                        <div class="content-box">
-                          <div class="title">
-                            <img
-                              src="./assets/img/crypto-icon/btc.svg"
-                              alt=""
-                            />
-                            BTC
-                          </div>
-                        </div>
-                      </label>
-                    </div>
-                    <div class="item">
-                      <input
-                        class="form-check-input"
-                        type="radio"
-                        name="flexRadioDefault"
-                        id="eth"
-                        checked=""
-                      />
-                      <label class="form-check-label" for="eth">
-                        <div class="content-box">
-                          <div class="title">
-                            <img
-                              src="./assets/img/crypto-icon/eth.svg"
-                              alt=""
-                            />
-                            ETh
-                          </div>
-                        </div>
-                      </label>
-                    </div>
-                  </div>
-                  <div class="custom-radio-container">
-                    <div class="item">
-                      <input
-                        class="form-check-input"
-                        type="radio"
-                        name="flexRadioDefault"
-                        id="usdt"
-                        checked=""
-                      />
-                      <label class="form-check-label" for="usdt">
-                        <div class="content-box">
-                          <div class="title">
-                            <img
-                              src="./assets/img/crypto-icon/usdt.svg"
-                              alt=""
-                            />
-                            usdt
-                          </div>
-                        </div>
-                      </label>
-                    </div>
-                    <div class="item">
-                      <input
-                        class="form-check-input"
-                        type="radio"
-                        name="flexRadioDefault"
-                        id="bnb"
-                      />
-                      <label class="form-check-label" for="bnb">
-                        <div class="content-box">
-                          <div class="title">
-                            <img
-                              src="./assets/img/crypto-icon/bnb.svg"
-                              alt=""
-                            />
-                            bnb
-                          </div>
-                        </div>
-                      </label>
-                    </div>
-                    <div class="item">
-                      <input
-                        class="form-check-input"
-                        type="radio"
-                        name="flexRadioDefault"
-                        id="other"
-                      />
-                      <label class="form-check-label" for="other">
-                        <div class="content-box">
-                          <div class="title">other</div>
-                        </div>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <button
-                  type="button"
-                  class="cmn-btn w-100"
-                  data-bs-toggle="modal"
-                  data-bs-target="#calculator-modal"
-                >
-                  <div class="text-box">Buy Now</div>
-                  <i class="fa-regular fa-angle-right"></i>
-                </button>
-                <div class="tagline">
-                  <i class="fa-regular fa-shield-check"></i>
-                  Safe & Instant Transactions
-                </div>
-              </div>
-              <div class="gradient"></div>
-            </form>
-            <div class="rate-btn-area">
-              <div>
-                <input
-                  type="radio"
-                  name="rate"
-                  class="btn-check"
-                  id="Floating-rate"
-                  autocomplete="off"
-                  checked
-                />
-                <label class="btn rate-btn" for="Floating-rate">
-                  <span><i class="fa-regular fa-lock"></i>Floating rate</span>
-                  <span>~16.40247385</span>
-                </label>
-              </div>
-              <div>
-                <input
-                  type="radio"
-                  name="rate"
-                  class="btn-check"
-                  id="Fixed-rate"
-                  autocomplete="off"
-                />
-                <label class="btn rate-btn" for="Fixed-rate">
-                  <span><i class="fa-regular fa-lock"></i>Fixed rate</span>
-                  <span>16.2848103</span>
-                </label>
-              </div>
-            </div>
-            <div class="notice-area">
-              <div class="icon-area">
-                <i class="fa-solid fa-circle-info"></i>
-              </div>
-              <small class="content-area"
-                >With the fixed rate, you will receive the exact amount of
-                crypto you see on this screen.</small
-              >
-            </div>
-            <div class="wallet-address-section">
-              <div class="item">
-                <h5 class="mb-2">Destination wallet address</h5>
-                <form class="form-floating">
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="floatingInputValue"
-                    placeholder="name@example.com"
-                  />
-                  <label for="floatingInputValue"
-                    >Enter your ETH recipient address</label
-                  >
-                </form>
-                <div class="tag-area">
-                  <small
-                    >FIO protocol and Unstoppable Domains are supported</small
-                  >
-                </div>
-              </div>
-              <div class="item">
-                <h5 class="mb-2">Refund wallet address</h5>
-                <form class="form-floating">
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="floatingInputValue"
-                    placeholder="name@example.com"
-                  />
-                  <label for="floatingInputValue">
-                    Enter your BTC recipient address
-                  </label>
-                </form>
-                <div class="tag-area">
-                  <small>
-                    FIO protocol and Unstoppable Domains are supported
-                  </small>
-                </div>
-              </div>
-              <div class="form-check">
-                <input
-                  type="checkbox"
-                  class="form-check-input"
-                  id="exampleCheck1"
-                />
-                <label class="form-check-label" for="exampleCheck1">
-                  I agree with <a href="">Terms of Use</a>,
-                  <a href="">Privacy Policy</a> and
-                  <a
-                    href="
-                              "
-                  >
-                    AML/KYC
-                  </a>
-                </label>
-              </div>
-              <div class="btn-area">
-                <a href="checkout.html" class="cmn-btn w-100"
-                  ><div class="text-box">Next step</div>
-                  <i class="fa-regular fa-angle-right"></i
-                ></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 order-3 order-lg-3">
-            <div class="transaction-summery">
-              <h4 class="title">Transaction details</h4>
-              <div class="transaction-item-container">
-                <div class="item">
-                  <span>You send</span>
-                  <h6>1 BTC</h6>
-                </div>
-                <div class="item">
-                  <span>Exchange rate</span>
-                  <h6>1 BTC ~ 16.45093894 ETH</h6>
-                </div>
-                <div class="item">
-                  <span>Service fee 0.25%</span>
-                  <h6>0.04112735 ETH</h6>
-                </div>
-                <div class="item">
-                  <span>Network fee</span>
-                  <h6>0.00189 ETH</h6>
-                </div>
 
-                <div class="item">
-                  <span>You get</span>
-                  <h6>~ 16.388904 ETH</h6>
+    <!-- Banner section start -->
+    <div class="banner-section">
+      <div class="banner-section-inner">
+        <div class="container">
+          <div class="row">
+            <div class="col-6">
+              <div class="breadcrumb-area">
+                <ul class="breadcrumb">
+                  <li class="breadcrumb-item">
+                    <a href="index.html"
+                      ><i class="fa-light fa-house"></i> Home</a
+                    >
+                  </li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    Author
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-6 text-end">
+              <h4 class="mb-0">Author</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Banner section end -->
+
+    <!-- Author section start -->
+    <section class="author-section">
+      <div class="container">
+        <div class="author-box">
+          <div class="row">
+            <div class="author-box-top align-items-center">
+              <div class="thumbs-area">
+                <figure>
+                  <img src="./assets/img/person/1.jpg" alt="ChainCity" />
+                </figure>
+              </div>
+              <div class="content-area">
+                <h3>Silvan Schuppisser</h3>
+                <h5>United States</h5>
+                <ul class="social-box mt-30">
+                  <li>
+                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                  </li>
+                  <li>
+                    <a href=""><i class="fab fa-twitter"></i></a>
+                  </li>
+                  <li>
+                    <a href=""><i class="fab fa-linkedin"></i></a>
+                  </li>
+                  <li>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-50">
+            <div class="author-details">
+              <h4>About The Author</h4>
+              <hr class="cmn-hr2" />
+              <p>
+                Silvan Schuppisser is a British American Crime Fiction writer
+                best known for his trilogy ‘CRIME XYZ’ which has sold more than
+                1.5 million copies worldwide in 2007
+              </p>
+              <!-- <br> -->
+              <p>
+                There are many variations of passages of Lorem Ipsum available,
+                but the majority have suffered alteration in some form, by
+                injected humour, or randomised words which don't look even
+                slightly believable. If you are going to use a passage of Lorem
+                Ipsum, you need to be sure there isn't anything embarrassing
+                hidden in the middle of text. All the Lorem Ipsum generators on
+                the Internet tend to repeat predefined chunks as necessary,
+                making this the first true generator on the Internet. It uses a
+                dictionary of over 200 Latin words, combined with a handful of
+                model
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Author section end -->
+
+    <!-- Blog Section start -->
+    <section class="blog-section">
+      <div class="container">
+        <div class="row align-items-center text-center text-md-start">
+          <div class="col-md-6">
+            <div class="section-subtitle">news & blogs</div>
+            <h2>Latest Blogs & <span class="highlight">Articles</span></h2>
+          </div>
+          <div class="col-md-6">
+            <p class="mb-0 fs-5">
+              Explore our blog for expert articles, industry updates, and the
+              latest news to keep you ahead of the curve in the ever-evolving
+              market.
+            </p>
+          </div>
+        </div>
+        <div class="mt-30">
+          <div class="row g-4 g-xl-5 justify-content-center">
+            <div class="col-lg-4 col-md-6">
+              <div class="blog-box">
+                <a href="blog-details.html">
+                  <div class="img-box">
+                    <img src="assets/img/blog/1.jpg" alt="" />
+                  </div>
+                </a>
+                <div class="text-box">
+                  <ul class="meta">
+                    <div class="left-side">
+                      <a href="author.html" class="item">
+                        <span class="icon"
+                          ><i class="fa-regular fa-user"></i
+                        ></span>
+                        <span>by Admin</span>
+                      </a>
+                      <div class="item">
+                        <span class="icon"
+                          ><i class="fa-regular fa-messages"></i
+                        ></span>
+                        <span>25</span>
+                      </div>
+                    </div>
+                    <div class="right-side">
+                      <div class="item">
+                        <span class="icon">
+                          <i class="fa-regular fa-calendar-days"></i>
+                        </span>
+                        <span> April 22, 2024 </span>
+                      </div>
+                    </div>
+                  </ul>
+                  <a class="blog-title" href="blog-details.html"
+                    >How to Avoid Scams in the PTC World: A Guide to Safe and
+                    Profitable Earning</a
+                  >
+                  <p class="para-text mb-0">
+                    Learn about Common PTC Scams and How to Stay Safe While
+                    Maximizing Your Earnings "Navigating the world of
+                    pay-per-click (PTC) websites can be rewarding, but it’s
+                    essential to stay informed about potential scams. In this
+                    post, we’ll walk you through the most common PTC scams, how
+                    to spot them, and proven strategies to avoid them. Learn
+                    safety tips that will help you earn confidently and securely
+                    on trusted platforms while steering clear of fraudulent
+                    sites."
+                  </p>
+                  <a href="" class="blog-btn mt-20"
+                    >Learn more <i class="fa-regular fa-arrow-right-long"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="blog-box">
+                <a href="blog-details.html">
+                  <div class="img-box">
+                    <img src="assets/img/blog/2.jpg" alt="" />
+                  </div>
+                </a>
+                <div class="text-box">
+                  <ul class="meta">
+                    <div class="left-side">
+                      <a href="author.html" class="item">
+                        <span class="icon"
+                          ><i class="fa-regular fa-user"></i
+                        ></span>
+                        <span>by Admin</span>
+                      </a>
+                      <div class="item">
+                        <span class="icon"
+                          ><i class="fa-regular fa-messages"></i
+                        ></span>
+                        <span>25</span>
+                      </div>
+                    </div>
+                    <div class="right-side">
+                      <div class="item">
+                        <span class="icon">
+                          <i class="fa-regular fa-calendar-days"></i>
+                        </span>
+                        <span> April 22, 2024 </span>
+                      </div>
+                    </div>
+                  </ul>
+                  <a class="blog-title" href="blog-details.html"
+                    >Understanding How PTC Advertising Works for Businesses:
+                    Boosting Brand Awareness and Driving Conversions</a
+                  >
+                  <p class="para-text mb-0">
+                    An In-Depth Guide for Advertisers: The Benefits of PTC
+                    Advertising and How to Maximize Your ROI "Are you looking to
+                    boost your business visibility and attract more customers?
+                    PTC advertising offers a unique, affordable way to reach a
+                    targeted audience, and this guide will show you how. We’ll
+                    explore the key advantages of using PTC for your marketing
+                    needs, provide insights on crafting effective ad campaigns,
+                    and share tips on maximizing your return on investment (ROI)
+                    with strategic placements and user engagement techniques."
+                  </p>
+                  <a href="" class="blog-btn mt-20"
+                    >Learn more <i class="fa-regular fa-arrow-right-long"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="blog-box">
+                <a href="blog-details.html">
+                  <div class="img-box">
+                    <img src="assets/img/blog/3.jpg" alt="" />
+                  </div>
+                </a>
+                <div class="text-box">
+                  <ul class="meta">
+                    <div class="left-side">
+                      <a href="author.html" class="item">
+                        <span class="icon"
+                          ><i class="fa-regular fa-user"></i
+                        ></span>
+                        <span>by Admin</span>
+                      </a>
+                      <div class="item">
+                        <span class="icon"
+                          ><i class="fa-regular fa-messages"></i
+                        ></span>
+                        <span>25</span>
+                      </div>
+                    </div>
+                    <div class="right-side">
+                      <div class="item">
+                        <span class="icon">
+                          <i class="fa-regular fa-calendar-days"></i>
+                        </span>
+                        <span> April 22, 2024 </span>
+                      </div>
+                    </div>
+                  </ul>
+                  <a class="blog-title" href="blog-details.html"
+                    >Exploring Additional Income Streams in the Online Space:
+                    Expanding Beyond PTC for Financial Success</a
+                  >
+                  <p class="para-text mb-0">
+                    Diversify Your Earnings: Discover Additional Online Income
+                    Streams Beyond PTC "While PTC sites are a great way to earn
+                    extra income, exploring other online opportunities can
+                    further increase your financial rewards. This article covers
+                    a variety of income streams—from freelance work to affiliate
+                    marketing and survey sites—that you can combine with PTC
+                    earnings. Start building a robust, diversified income
+                    strategy that suits your lifestyle and goals for a more
+                    secure financial future."
+                  </p>
+                  <a href="" class="blog-btn mt-20"
+                    >Learn more <i class="fa-regular fa-arrow-right-long"></i
+                  ></a>
                 </div>
               </div>
             </div>
@@ -560,7 +520,7 @@
         </div>
       </div>
     </section>
-    <!-- Calculate details section end -->
+    <!-- Blog Section end -->
 
     <!-- Footer Section start -->
     <section class="footer-section">

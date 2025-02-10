@@ -27,6 +27,7 @@ $(document).ready(function () {
     margin: 50,
     autoplayTimeout: 2000,
     nav: false,
+    // rtl: true,
     navText: [
       "<i class='fa-regular fa-angle-left'></i>",
       "<i class='fa-regular fa-angle-right'></i>",
@@ -54,15 +55,17 @@ $(document).ready(function () {
     },
   });
   // Banner sllider start
-  $(".banner-slider").slick({
-    autoplay: true,
-    dots: false,
-    infinite: true,
-    speed: 500,
-    fade: true,
-    cssEase: "linear",
-    arrows: false,
-  });
+  if ($(".banner-slider").length) {
+    $(".banner-slider").slick({
+      autoplay: true,
+      dots: false,
+      infinite: true,
+      speed: 500,
+      fade: true,
+      cssEase: "linear",
+      arrows: false,
+    });
+  }
   // Banner sllider end
 
   // cmn select2 start
@@ -455,3 +458,11 @@ if ($(".search-box2").length) {
   });
 }
 // Dropdown select with Filter end
+// countdown
+$("#countdown1").countdown("2025/11/05", function (event) {
+  $(this).html(
+    event.strftime(
+      '<div class="single-coundown"><h5>%H :</h5></div><div class="single-coundown"><h5>%M :</h5></div><div class="single-coundown"><h5>%S</h5></div>'
+    )
+  );
+});

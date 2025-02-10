@@ -36,6 +36,43 @@
     </div>
     <!-- Preloader section end -->
 
+    <!-- Header top section start -->
+    <div class="offer-banner-seciton d-none d-lg-block">
+      <button type="button" class="offer-close-btn">
+        <i class="fa-regular fa-xmark"></i>
+      </button>
+      <div class="container h-100">
+        <div class="row h-100">
+          <div
+            class="col-12 gap-3 justify-content-center align-items-center d-flex"
+          >
+            <p class="mb-0">
+              Exchange crypto for a 0% service fee in the app! Exclusive offer
+              for your next exchange.
+            </p>
+            <a href="" class="offer-btn">Get in app</a>
+          </div>
+        </div>
+      </div>
+      <div class="offer-overlay"></div>
+    </div>
+    <div class="mobile-offer-banner d-lg-none">
+      <button type="button" class="offer-close-btn">
+        <i class="fa-regular fa-xmark"></i>
+      </button>
+      <div
+        class="gap-3 justify-content-center align-items-center d-flex flex-column"
+      >
+        <p class="mb-0">
+          Exchange crypto for a 0% service fee in the app! Exclusive offer for
+          your next exchange.
+        </p>
+        <a href="" class="offer-btn">Get in app</a>
+      </div>
+      <div class="mobile-offer-banner-inner"></div>
+    </div>
+    <!-- Header top section end -->
+
     <!-- Nav section start -->
     <nav class="navbar sticky-top navbar-expand-lg">
       <div class="container">
@@ -298,8 +335,8 @@
                       </div>
                       <div class="text-area">
                         <p class="mb-0">
-                          Hottest rates for
-                          <strong> USDT/BTC, USDT/ETH</strong> swaps
+                          Rate for stablecoin swaps:
+                          <strong> same coin, any chain</strong>
                         </p>
                       </div>
                     </div>
@@ -1332,7 +1369,7 @@
     >
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-          <div class="modal-header">
+          <div class="modal-header pb-0">
             <h4 class="modal-title" id="staticBackdropLabel"></h4>
             <button
               type="button"
@@ -1396,7 +1433,7 @@
             <div>
               <label class="form-label" for="You-send">You send</label>
               <div class="input-box">
-                <input type="text" class="form-control" id="You-send" />
+                <input type="number" class="form-control" id="You-send" />
                 <div class="input-dropdown-toggle">
                   <div class="img-box">
                     <img src="./assets/img/crypto-icon/btc.svg" alt="" />
@@ -1419,7 +1456,7 @@
             <div>
               <label class="form-label" for="You-get">You get</label>
               <div class="input-box">
-                <input type="text" class="form-control" id="You-get" />
+                <input type="number" class="form-control" id="You-get" />
                 <div class="input-dropdown-toggle">
                   <div class="img-box">
                     <img src="./assets/img/crypto-icon/xrp.svg" alt="" />
@@ -1434,7 +1471,7 @@
                 </div>
               </div>
             </div>
-            <div class="transaction-summery">
+            <div class="transaction-summery mt-30">
               <h6 class="mb-20 highlight">You get 113058.70552259 XRP</h6>
               <div class="cmn-list">
                 <div class="item">
@@ -1457,10 +1494,10 @@
             </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="cmn-btn w-100 m-0">
+            <a href="exchange.html" type="button" class="cmn-btn w-100 m-0">
               <div class="text-box">Exchage now</div>
               <i class="fa-regular fa-angle-right"></i>
-            </button>
+            </a>
           </div>
           <!-- Calculator sidebar start -->
           <div id="calculator-sidebar" class="calculator-sidebar">

@@ -250,10 +250,11 @@
       </li>
     </ul>
     <!-- Bottom Mobile Tab nav section end -->
+
     <!-- Calculate details section start -->
     <section class="calculator-details-section">
       <div class="container">
-        <div class="row g-xl-5 g-4 justify-content-center">
+        <div class="row g-xl-5 g-4">
           <div class="col-lg-3 order-2 order-lg-1">
             <div class="progress-section">
               <h6>Provide address information to create a transaction</h6>
@@ -303,263 +304,69 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-5 order-1 order-lg-2">
-            <form class="calculator mw-100">
-              <div class="calculator-body">
-                <div class="calculator-top-button-box">
-                  <button type="button" class="single-button active">
-                    Buy
-                  </button>
-                  <button type="button" class="single-button">sell</button>
-                  <button type="button" class="single-button">exchange</button>
-                </div>
-                <div class="calculator-middle-button-box">
-                  <div class="custom-radio-container">
-                    <div class="item">
-                      <input
-                        class="form-check-input"
-                        type="radio"
-                        name="flexRadioDefault"
-                        id="btc"
-                        checked=""
-                      />
-                      <label class="form-check-label" for="btc">
-                        <div class="content-box">
-                          <div class="title">
-                            <img
-                              src="./assets/img/crypto-icon/btc.svg"
-                              alt=""
-                            />
-                            BTC
-                          </div>
-                        </div>
-                      </label>
-                    </div>
-                    <div class="item">
-                      <input
-                        class="form-check-input"
-                        type="radio"
-                        name="flexRadioDefault"
-                        id="eth"
-                        checked=""
-                      />
-                      <label class="form-check-label" for="eth">
-                        <div class="content-box">
-                          <div class="title">
-                            <img
-                              src="./assets/img/crypto-icon/eth.svg"
-                              alt=""
-                            />
-                            ETh
-                          </div>
-                        </div>
-                      </label>
-                    </div>
-                  </div>
-                  <div class="custom-radio-container">
-                    <div class="item">
-                      <input
-                        class="form-check-input"
-                        type="radio"
-                        name="flexRadioDefault"
-                        id="usdt"
-                        checked=""
-                      />
-                      <label class="form-check-label" for="usdt">
-                        <div class="content-box">
-                          <div class="title">
-                            <img
-                              src="./assets/img/crypto-icon/usdt.svg"
-                              alt=""
-                            />
-                            usdt
-                          </div>
-                        </div>
-                      </label>
-                    </div>
-                    <div class="item">
-                      <input
-                        class="form-check-input"
-                        type="radio"
-                        name="flexRadioDefault"
-                        id="bnb"
-                      />
-                      <label class="form-check-label" for="bnb">
-                        <div class="content-box">
-                          <div class="title">
-                            <img
-                              src="./assets/img/crypto-icon/bnb.svg"
-                              alt=""
-                            />
-                            bnb
-                          </div>
-                        </div>
-                      </label>
-                    </div>
-                    <div class="item">
-                      <input
-                        class="form-check-input"
-                        type="radio"
-                        name="flexRadioDefault"
-                        id="other"
-                      />
-                      <label class="form-check-label" for="other">
-                        <div class="content-box">
-                          <div class="title">other</div>
-                        </div>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <button
-                  type="button"
-                  class="cmn-btn w-100"
-                  data-bs-toggle="modal"
-                  data-bs-target="#calculator-modal"
+          <div class="col-lg-6 order-1 order-lg-2">
+            <div class="checkout-section">
+              <div class="checkout-header">
+                <h4 class="mb-0">Checkout</h4>
+                <a href="exchange.html" class="cmn-btn2"
+                  ><i class="fa-regular fa-arrow-left"></i>Back</a
                 >
-                  <div class="text-box">Buy Now</div>
-                  <i class="fa-regular fa-angle-right"></i>
-                </button>
-                <div class="tagline">
-                  <i class="fa-regular fa-shield-check"></i>
-                  Safe & Instant Transactions
+              </div>
+              <div class="checkout-table">
+                <div class="table-row">
+                  <div class="item">
+                    <span>You send</span>
+                    <h6>0.1 BTC</h6>
+                    <span class="highlight">blockchain: bitcoin</span>
+                  </div>
+                  <div class="item">
+                    <span>You get</span>
+                    <h6>~ 1.6469358 ETH</h6>
+                    <span class="highlight">blockchain: ethereum</span>
+                  </div>
                 </div>
-              </div>
-              <div class="gradient"></div>
-            </form>
-            <div class="rate-btn-area">
-              <div>
-                <input
-                  type="radio"
-                  name="rate"
-                  class="btn-check"
-                  id="Floating-rate"
-                  autocomplete="off"
-                  checked
-                />
-                <label class="btn rate-btn" for="Floating-rate">
-                  <span><i class="fa-regular fa-lock"></i>Floating rate</span>
-                  <span>~16.40247385</span>
-                </label>
-              </div>
-              <div>
-                <input
-                  type="radio"
-                  name="rate"
-                  class="btn-check"
-                  id="Fixed-rate"
-                  autocomplete="off"
-                />
-                <label class="btn rate-btn" for="Fixed-rate">
-                  <span><i class="fa-regular fa-lock"></i>Fixed rate</span>
-                  <span>16.2848103</span>
-                </label>
+                <div class="table-row">
+                  <div class="item">
+                    <span>Exchange fee</span>
+                    <h6>0.0041324 ETH</h6>
+                    <div class="small">
+                      The exchange fee is already included in the displayed
+                      amount you’ll get
+                    </div>
+                  </div>
+                  <div class="item">
+                    <span>You get</span>
+                    <h6>~ 1.6469358 ETH</h6>
+                    <div class="small">
+                      The network fee is already included in the displayed
+                      amount you’ll get
+                    </div>
+                  </div>
+                </div>
+                <div class="table-row">
+                  <div class="item">
+                    <span>Recipient address</span>
+                    <h6>0x3b9bA781797b57872687Ce5d5219A1A4Bc0e85ea</h6>
+                  </div>
+                  <div class="item">
+                    <span>Exchange rate</span>
+                    <h6>1 BTC ~ 16.52958195 ETH</h6>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="notice-area">
-              <div class="icon-area">
-                <i class="fa-solid fa-circle-info"></i>
-              </div>
-              <small class="content-area"
-                >With the fixed rate, you will receive the exact amount of
-                crypto you see on this screen.</small
-              >
-            </div>
-            <div class="wallet-address-section">
-              <div class="item">
-                <h5 class="mb-2">Destination wallet address</h5>
-                <form class="form-floating">
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="floatingInputValue"
-                    placeholder="name@example.com"
-                  />
-                  <label for="floatingInputValue"
-                    >Enter your ETH recipient address</label
-                  >
-                </form>
-                <div class="tag-area">
-                  <small
-                    >FIO protocol and Unstoppable Domains are supported</small
-                  >
-                </div>
-              </div>
-              <div class="item">
-                <h5 class="mb-2">Refund wallet address</h5>
-                <form class="form-floating">
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="floatingInputValue"
-                    placeholder="name@example.com"
-                  />
-                  <label for="floatingInputValue">
-                    Enter your BTC recipient address
-                  </label>
-                </form>
-                <div class="tag-area">
-                  <small>
-                    FIO protocol and Unstoppable Domains are supported
-                  </small>
-                </div>
-              </div>
-              <div class="form-check">
-                <input
-                  type="checkbox"
-                  class="form-check-input"
-                  id="exampleCheck1"
-                />
-                <label class="form-check-label" for="exampleCheck1">
-                  I agree with <a href="">Terms of Use</a>,
-                  <a href="">Privacy Policy</a> and
-                  <a
-                    href="
-                              "
-                  >
-                    AML/KYC
-                  </a>
-                </label>
-              </div>
-              <div class="btn-area">
-                <a href="checkout.html" class="cmn-btn w-100"
-                  ><div class="text-box">Next step</div>
-                  <i class="fa-regular fa-angle-right"></i
-                ></a>
-              </div>
+            <div class="widget-area">
+              <a href="transaction.html" class="cmn-btn w-100">
+                <div class="text-box">Confirm & make payment</div>
+                <i class="fa-regular fa-angle-right"></i>
+              </a>
             </div>
           </div>
-          <div class="col-lg-3 order-3 order-lg-3">
-            <div class="transaction-summery">
-              <h4 class="title">Transaction details</h4>
-              <div class="transaction-item-container">
-                <div class="item">
-                  <span>You send</span>
-                  <h6>1 BTC</h6>
-                </div>
-                <div class="item">
-                  <span>Exchange rate</span>
-                  <h6>1 BTC ~ 16.45093894 ETH</h6>
-                </div>
-                <div class="item">
-                  <span>Service fee 0.25%</span>
-                  <h6>0.04112735 ETH</h6>
-                </div>
-                <div class="item">
-                  <span>Network fee</span>
-                  <h6>0.00189 ETH</h6>
-                </div>
-
-                <div class="item">
-                  <span>You get</span>
-                  <h6>~ 16.388904 ETH</h6>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div class="col-md-3 order-3"></div>
         </div>
       </div>
     </section>
+
     <!-- Calculate details section end -->
 
     <!-- Footer Section start -->
