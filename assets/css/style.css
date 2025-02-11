@@ -119,85 +119,40 @@ preloader section start
   position: fixed;
   width: 100%;
   height: 100vh;
-  top: 0;
-  left: 0;
   z-index: 99999;
-  background-color: rgb(var(--bg-color1));
+  background-color: rgb(var(--white));
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#preloader .loader {
-  width: 70px;
-  height: 70px;
-  position: relative;
-  transform: rotate(45deg);
+#preloader .preloader-image {
+  width: 100px;
+  animation: flipInY both 2s infinite;
 }
-#preloader .loader:before,
-#preloader .loader:after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 50% 50% 0 50%;
-  background: rgba(0, 0, 0, 0);
-  background-image: radial-gradient(circle 11.2px at 50% 50%, rgba(0, 0, 0, 0) 94%, rgb(var(--primary-color)));
-}
-#preloader .loader:after {
-  animation: pulse-ytk0dhmd 1s infinite;
-  transform: perspective(336px) translateZ(0px);
-}
-@keyframes pulse-ytk0dhmd {
-  to {
-    transform: perspective(336px) translateZ(168px);
+@keyframes flipInY {
+  0% {
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    animation-timing-function: ease-in;
     opacity: 0;
+  }
+  40% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    animation-timing-function: ease-in;
+  }
+  60% {
+    transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    opacity: 1;
+  }
+  80% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+  }
+  100% {
+    transform: perspective(400px);
   }
 }
 
 /*----------------------------------------------
 preloader end
-----------------------------------------------*/
-/*----------------------------------------------
-scroll up section start
-----------------------------------------------*/
-.scroll-up {
-  position: fixed;
-  bottom: 40px;
-  right: 40px;
-  z-index: 99999;
-}
-
-.rtl .scroll-up {
-  left: 50px;
-  right: auto;
-}
-
-@media (max-width: 767px) {
-  .scroll-up {
-    bottom: 50px;
-    right: 20px;
-  }
-  .rtl .scroll-up {
-    left: 20px;
-  }
-}
-.scroll-up i {
-  color: #fff;
-  height: 40px;
-  width: 40px;
-  background: var(--btn-bg1);
-  border-radius: 4px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: var(--transition);
-}
-.scroll-up i:hover {
-  background: var(--btn-bg2);
-}
-
-/*----------------------------------------------
-scroll up end
 ----------------------------------------------*/
 *,
 *::after,
@@ -1163,6 +1118,10 @@ a.ui-button:active,
     font-size: 16px !important;
   }
 }
+.rtl .text-end {
+  text-align: left !important;
+}
+
 /*----------------------------------------------
 Reset end
 ----------------------------------------------*/
@@ -1937,13 +1896,32 @@ Offcanvas end
 }
 
 .cmn-btn3 {
+  background-color: rgb(var(--bg-color2));
+  padding: 12px 16px;
+  border-radius: 40px;
+  transition: var(--transition);
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: rgb(var(--Very-dark-grayish-blue));
+}
+.cmn-btn3 .img-box {
+  width: 22px;
+  height: 22px;
+}
+.cmn-btn3 .img-box img {
+  border-radius: 50%;
+}
+.cmn-btn3 .text-box {
   display: flex;
   align-items: center;
-  gap: 5px;
-  color: rgb(var(--heading-color));
-  transition: var(--transition);
+  gap: 3px;
 }
-.cmn-btn3:hover {
+.cmn-btn3 .icon {
   color: rgb(var(--primary-color));
 }
 
@@ -1989,7 +1967,7 @@ Offcanvas end
 
 .social-btn {
   background: rgb(var(--bg-color1));
-  padding: 10px 20px;
+  padding: 14px 20px;
   border: 1px solid var(--border-color1);
   transition: var(--transition);
   font-size: 16px;
@@ -4673,7 +4651,7 @@ Margin top start
 }
 
 /*----------------------------------------------
-end
+Margin top end
 ----------------------------------------------*/
 /*----------------------------------------------
 Margin bottom start
@@ -4743,7 +4721,7 @@ Margin bottom start
 }
 
 /*----------------------------------------------
-end
+Margin bottom end
 ----------------------------------------------*/
 /*----------------------------------------------
 Padding top start
@@ -4813,10 +4791,10 @@ Padding top start
 }
 
 /*----------------------------------------------
-end
+Padding top end
 ----------------------------------------------*/
 /*----------------------------------------------
-Padding bottom
+Padding bottom start
 ----------------------------------------------*/
 .pb-15 {
   padding-bottom: 15px;
@@ -4875,7 +4853,7 @@ Padding bottom
 }
 
 /*----------------------------------------------
-Padding bottom
+Padding bottom end
 ----------------------------------------------*/
 .offer-banner-seciton {
   position: relative;
@@ -5752,7 +5730,7 @@ Testimonial end
 }
 
 /*----------------------------------------------
-Faq end
+Faq section end
 ----------------------------------------------*/
 /*----------------------------------------------
 18. Blog section start
@@ -6734,6 +6712,19 @@ Login Signup end
 .sidebar-widget-area .sidebar-widget-item:not(:last-child) {
   margin-bottom: 20px;
 }
+.sidebar-widget-area .widget-title {
+  margin-bottom: 20px;
+  position: relative;
+  text-transform: capitalize;
+  display: flex;
+  gap: 10px;
+}
+.sidebar-widget-area .widget-title::before {
+  content: "";
+  width: 5px;
+  border-radius: 6px;
+  background-color: rgb(var(--primary-color));
+}
 
 .rtl .sidebar-widget-item .content-area {
   margin-left: 0;
@@ -7165,9 +7156,6 @@ Calculator details section start
   display: flex;
   align-items: center;
 }
-.wallet-address-section .form-floating > label {
-  padding-right: 35px;
-}
 .wallet-address-section .tag-area {
   margin-top: 5px;
   display: flex;
@@ -7343,18 +7331,6 @@ Calculator details section start
   .calculator-details-section {
     padding: 50px 0;
   }
-}
-.rtl .wallet-address-section .form-floating .form-control {
-  padding-left: 40px;
-  padding-right: 12px;
-}
-.rtl .wallet-address-section .form-floating .icon {
-  right: auto;
-  left: 15px;
-}
-.rtl .wallet-address-section .form-floating > label {
-  padding-left: 35px;
-  padding-right: 12px;
 }
 .rtl .progress-step-area .item:nth-child(2) .icon-area {
   transform: rotate(180deg);

@@ -126,96 +126,53 @@ preloader section start
   position: fixed;
   width: 100%;
   height: 100vh;
-  top: 0;
-  left: 0;
   z-index: 99999;
-  background-color: rgb(var(--bg-color1));
+  background-color: rgb(var(--white));
   display: flex;
   justify-content: center;
   align-items: center;
 
-  .loader {
-    width: 70px;
-    height: 70px;
-    position: relative;
-    transform: rotate(45deg);
+  .preloader-image {
+    width: 100px;
+    animation: flipInY both 2s infinite;
   }
 
-  .loader:before,
-  .loader:after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: 50% 50% 0 50%;
-    background: #0000;
-    background-image: radial-gradient(
-      circle 11.2px at 50% 50%,
-      #0000 94%,
-      rgb(var(--primary-color))
-    );
-  }
-
-  .loader:after {
-    animation: pulse-ytk0dhmd 1s infinite;
-    transform: perspective(336px) translateZ(0px);
-  }
-
-  @keyframes pulse-ytk0dhmd {
-    to {
-      transform: perspective(336px) translateZ(168px);
+  @keyframes flipInY {
+    0% {
+      -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+      transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
       opacity: 0;
+    }
+
+    40% {
+      -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+      transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+
+    60% {
+      -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+      transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+      opacity: 1;
+    }
+
+    80% {
+      -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+      transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+    }
+
+    100% {
+      -webkit-transform: perspective(400px);
+      transform: perspective(400px);
     }
   }
 }
+
 /*----------------------------------------------
 preloader end
-----------------------------------------------*/
-
-/*----------------------------------------------
-scroll up section start
-----------------------------------------------*/
-.scroll-up {
-  position: fixed;
-  bottom: 40px;
-  right: 40px;
-  z-index: 99999;
-}
-
-.rtl .scroll-up {
-  left: 50px;
-  right: auto;
-}
-
-@media (max-width: 767px) {
-  .scroll-up {
-    bottom: 50px;
-    right: 20px;
-  }
-
-  .rtl .scroll-up {
-    left: 20px;
-  }
-}
-
-.scroll-up i {
-  color: #fff;
-  height: 40px;
-  width: 40px;
-  background: var(--btn-bg1);
-  border-radius: 4px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: var(--transition);
-
-  &:hover {
-    background: var(--btn-bg2);
-  }
-}
-
-/*----------------------------------------------
-scroll up end
 ----------------------------------------------*/
 
 *,
@@ -1152,8 +1109,6 @@ body::-webkit-scrollbar-thumb {
 
 // Currency select sidebar end
 
-// Cmn-btn-start
-
 // Cmn btn close start
 .cmn-btn-close {
   font-size: 18px;
@@ -1319,6 +1274,12 @@ a.ui-button:active,
 @media (max-width: 767px) {
   .fs-5 {
     font-size: 16px !important;
+  }
+}
+
+.rtl {
+  .text-end {
+    text-align: left !important;
   }
 }
 /*----------------------------------------------
@@ -2226,6 +2187,7 @@ Offcanvas end
   -webkit-text-fill-color: transparent;
 }
 
+// Cmn-btn-start
 .cmn-btn {
   background-color: rgb(var(--secondary-color));
   padding: 16px;
@@ -2280,13 +2242,31 @@ Offcanvas end
 }
 
 .cmn-btn3 {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  color: rgb(var(--heading-color));
+  background-color:rgb( var(--bg-color2));
+  padding: 12px 16px;
+  border-radius: 40px;
   transition: var(--transition);
-
-  &:hover {
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: rgb(var(--Very-dark-grayish-blue));
+  .img-box {
+    width: 22px;
+    height: 22px;
+    img {
+      border-radius: 50%;
+    }
+  }
+  .text-box {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+  }
+  .icon{
     color: rgb(var(--primary-color));
   }
 }
@@ -2335,7 +2315,7 @@ Offcanvas end
 
 .social-btn {
   background: rgb(var(--bg-color1));
-  padding: 10px 20px;
+  padding: 14px 20px;
   border: 1px solid var(--border-color1);
   transition: var(--transition);
   font-size: 16px;
@@ -5716,7 +5696,7 @@ Margin top start
 }
 
 /*----------------------------------------------
-end
+Margin top end
 ----------------------------------------------*/
 
 /*----------------------------------------------
@@ -5787,7 +5767,7 @@ Margin bottom start
 }
 
 /*----------------------------------------------
-end
+Margin bottom end
 ----------------------------------------------*/
 
 /*----------------------------------------------
@@ -5857,11 +5837,11 @@ Padding top start
 }
 
 /*----------------------------------------------
-end
+Padding top end
 ----------------------------------------------*/
 
 /*----------------------------------------------
-Padding bottom
+Padding bottom start
 ----------------------------------------------*/
 .pb-15 {
   padding-bottom: 15px;
@@ -5920,7 +5900,7 @@ Padding bottom
 }
 
 /*----------------------------------------------
-Padding bottom
+Padding bottom end
 ----------------------------------------------*/
 
 // Offer banner section start
@@ -7012,7 +6992,7 @@ Testimonial end
 
 // Faq rtl end
 /*----------------------------------------------
-Faq end
+Faq section end
 ----------------------------------------------*/
 
 /*----------------------------------------------
@@ -8246,6 +8226,20 @@ Login Signup end
       margin-bottom: 20px;
     }
   }
+  .widget-title {
+    margin-bottom: 20px;
+    position: relative;
+    text-transform: capitalize;
+    display: flex;
+    gap: 10px;
+
+    &::before {
+      content: "";
+      width: 5px;
+      border-radius: 6px;
+      background-color: rgb(var(--primary-color));
+    }
+  }
 }
 
 // Blog details rtl start
@@ -8770,10 +8764,6 @@ Calculator details section start
   .form-floating {
     display: flex;
     align-items: center;
-
-    & > label {
-      padding-right: 35px;
-    }
   }
 
   .tag-area {
@@ -8970,35 +8960,16 @@ Calculator details section start
   color: var(--heading-color);
 }
 
-// Responsive calculatior details section start
+// Responsive calculator details section start
 @media (max-width: 991px) {
   .calculator-details-section {
     padding: 50px 0;
   }
 }
 
-// Responsive calculatior details section end
-// Rtl calculatior details section start
+// Responsive calculator details section end
+// Rtl calculator details section start
 .rtl {
-  .wallet-address-section {
-    .form-floating {
-      .form-control {
-        padding-left: 40px;
-        padding-right: 12px;
-      }
-
-      .icon {
-        right: auto;
-        left: 15px;
-      }
-
-      & > label {
-        padding-left: 35px;
-        padding-right: 12px;
-      }
-    }
-  }
-
   .progress-step-area {
     .item:nth-child(2) {
       .icon-area {
@@ -9008,7 +8979,7 @@ Calculator details section start
   }
 }
 
-// Rtl calculatior details section end
+// Rtl calculator details section end
 /*----------------------------------------------
 Calculator details section end
 ----------------------------------------------*/

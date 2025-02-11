@@ -160,116 +160,6 @@ $(document).ready(function () {
     dropdownParent: $("#formModal"),
   });
   // cmn select2 modal start
-
-  // Countdown start
-  if ($(".countdown").length) {
-    $(".countdown").countdown("2025/3/19", function (event) {
-      $(this).html(
-        event.strftime(
-          '<div class="single-countdown"><h5>%D</h5><span>Days</span> </div> <div class="single-countdown"><h5>%H</h5><span>Hours</span> </div> <div class="single-countdown"><h5>%M</h5><span>Minutes</span> </div> <div class="single-countdown"><h5>%S</h5><span>Second</span> </div>'
-        )
-      );
-    });
-  }
-  // Countdown end
-
-  // Isotope start
-  if ($(".listing-row").length) {
-    $(document).ready(function () {
-      var $grid = $(".listing-row").isotope({
-        itemSelector: ".grid-item",
-        percentPosition: true,
-        masonry: {
-          columnWidth: 1,
-        },
-      });
-
-      var selectedFilter = localStorage.getItem("selectedFilter") || ".all";
-      $grid.isotope({ filter: selectedFilter });
-
-      $(".isotope-btn-group button").removeClass("active");
-      $(
-        '.isotope-btn-group button[data-filter="' + selectedFilter + '"]'
-      ).addClass("active");
-
-      $(".isotope-btn-group").on("click", "button", function () {
-        var filterValue = $(this).attr("data-filter");
-        $grid.isotope({ filter: filterValue });
-        localStorage.setItem("selectedFilter", filterValue);
-
-        $(this).siblings(".active").removeClass("active");
-        $(this).addClass("active");
-      });
-
-      $grid.isotope("layout");
-
-      $(".form-check-input").on("change", function () {
-        $(".review-single-hidden-box").toggle(this.checked);
-        $grid.isotope("layout");
-      });
-    });
-  }
-  // Isotope ends
-
-  //--- BAR FILLAR ---//
-  if ($(".progress-bar").length) {
-    const progressItem = document.getElementsByClassName("progress-item")[0];
-    const progressBars = document.querySelectorAll(".progress-bar");
-
-    function showProgress() {
-      progressBars.forEach((progressBar) => {
-        const value = progressBar.dataset.progress;
-        progressBar.style.opacity = 1;
-        progressBar.style.width = `${value}%`;
-      });
-    }
-
-    function hideProgress() {
-      progressBars.forEach((p) => {
-        p.style.opacity = 0;
-        p.style.width = 0;
-      });
-    }
-
-    window.addEventListener("scroll", () => {
-      const sectionPos = progressItem.getBoundingClientRect().top;
-      const screenPos = window.innerHeight;
-      if (sectionPos < screenPos) {
-        showProgress();
-      } else {
-        hideProgress();
-      }
-    });
-  }
-  //--- BAR FILLAR ---//
-
-  // Date picker start
-  if ($("#myID2").length) {
-    flatpickr("#myID2", {
-      altInput: true,
-      dateFormat: "YYYY-MM-DD",
-      altFormat: "DD-MM-YYYY",
-      allowInput: true,
-    });
-    const flatpickrInstance = $("#myID2").flatpickr();
-    $(".calendar-icon").on("click", function () {
-      flatpickrInstance.open();
-    });
-  }
-  // Date picker end
-
-  // Sortable drag & drop start
-  if ($(".timeline-box").length) {
-    new Sortable(document.querySelector(".timeline-box"), {
-      handle: ".move-btn",
-      animation: 150,
-      ghostClass: "sortable-ghost",
-      chosenClass: "sortable-chosen",
-      scroll: true,
-      scrollSensitivity: 30,
-      scrollSpeed: 10,
-    });
-  }
 });
 
 // input file preview
@@ -308,25 +198,6 @@ if ($("#shareBlock").length) {
 }
 // Social share end
 
-// Nice select start
-if ($(".nice-select").length) {
-  $(".nice-select").niceSelect();
-}
-// Nice select end
-
-// Range area start
-if ($(".js-range-slider").length) {
-  $(".js-range-slider").ionRangeSlider({
-    type: "double",
-    min: 0,
-    max: 1000,
-    from: 200,
-    to: 500,
-    grid: false,
-  });
-}
-// Range area end
-
 // International Telephone Input start
 if ($("#telephone").length) {
   const input = document.querySelector("#telephone");
@@ -336,35 +207,6 @@ if ($("#telephone").length) {
   });
 }
 // International Telephone Input end
-
-// Increase decrease button start
-document.addEventListener("DOMContentLoaded", (event) => {
-  const cartItemCounts = document.querySelectorAll(".cart-item-count");
-  cartItemCounts.forEach((cartItemCount) => {
-    const decreaseButton = cartItemCount.querySelector("[data-decrease]");
-    const increaseButton = cartItemCount.querySelector("[data-increase]");
-    const valueInput = cartItemCount.querySelector("[data-value]");
-
-    decreaseButton.addEventListener("click", () => {
-      let currentValue = parseInt(valueInput.value);
-      if (currentValue > 1) {
-        valueInput.value = currentValue - 1;
-      }
-    });
-
-    increaseButton.addEventListener("click", () => {
-      let currentValue = parseInt(valueInput.value);
-      valueInput.value = currentValue + 1;
-    });
-  });
-});
-
-// Increase decrement button end
-// Jquery UI start
-if ($("#datepicker").length) {
-  $("#datepicker").datepicker();
-}
-// Jquery UI end
 
 // Copy page url start
 if ($("#copyBtn").length) {
@@ -384,6 +226,7 @@ if ($("#copyBtn").length) {
 }
 
 // Copy page url end
+
 // input field show hide password start
 if (document.querySelector(".login-register-form")) {
   const passwordBoxes = document.querySelectorAll(".password-box");
@@ -458,11 +301,14 @@ if ($(".search-box2").length) {
   });
 }
 // Dropdown select with Filter end
+
 // countdown
-$("#countdown1").countdown("2025/11/05", function (event) {
-  $(this).html(
-    event.strftime(
-      '<div class="single-coundown"><h5>%H :</h5></div><div class="single-coundown"><h5>%M :</h5></div><div class="single-coundown"><h5>%S</h5></div>'
-    )
-  );
-});
+if ($("#countdown1").length) {
+  $("#countdown1").countdown("2025/11/05", function (event) {
+    $(this).html(
+      event.strftime(
+        '<div class="single-coundown"><h5>%H :</h5></div><div class="single-coundown"><h5>%M :</h5></div><div class="single-coundown"><h5>%S</h5></div>'
+      )
+    );
+  });
+}
